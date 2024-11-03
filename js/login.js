@@ -31,4 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
         forgotPasswordForm.classList.remove('active');
         loginForm.classList.add('active');
     });
+
+    // 模拟登录成功后的跳转
+    loginForm.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('登录成功！');
+        window.location.href = 'index.html'; // 跳转到首页
+    });
 }); 
