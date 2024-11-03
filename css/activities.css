@@ -1,0 +1,95 @@
+/* 继承通用样式 */
+@import 'index.css';
+
+/* 横幅样式 */
+.activities-banner {
+    height: 400px;
+    background: url('../assets/images/activities-banner.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    margin-top: 80px;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 活动区样式 */
+.activities-section {
+    padding: 60px 0;
+}
+
+.activities-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.activity-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.activity-content {
+    padding: 20px;
+}
+
+.activity-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.activity-content p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.join-now,
+.view-details {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.join-now:hover,
+.view-details:hover {
+    color: #0052a3;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+} 

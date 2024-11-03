@@ -1,0 +1,160 @@
+/* 继承通用样式 */
+@import 'index.css';
+
+/* 横幅样式 */
+.knowledge-banner {
+    height: 400px;
+    background: url('../assets/images/haircare-banner.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    margin-top: 80px;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 文章区样式 */
+.articles-section {
+    padding: 60px 0;
+}
+
+.articles-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.article-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+}
+
+.article-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 20px;
+}
+
+.article-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.article-content p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #0052a3;
+}
+
+/* 小贴士区样式 */
+.tips-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.tips-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.tip-card {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.tip-card:hover {
+    transform: translateY(-10px);
+}
+
+.tip-card i {
+    font-size: 2.5rem;
+    color: #0066cc;
+    margin-bottom: 15px;
+}
+
+/* 常见问题区样式 */
+.faq-section {
+    padding: 60px 0;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+}
+
+.faq-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.faq-item p {
+    color: #666;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .articles-grid,
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+} 

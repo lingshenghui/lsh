@@ -1,0 +1,236 @@
+/* 继承通用样式 */
+@import 'index.css';
+
+/* 品牌横幅样式 */
+.brand-banner {
+    height: 500px;
+    background: url('../assets/images/about-banner.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    margin-top: 80px;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.banner-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 时间线样式 */
+.history-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.timeline {
+    max-width: 1000px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #0066cc;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    position: relative;
+    margin-bottom: 50px;
+    width: 50%;
+}
+
+.timeline-item:nth-child(even) {
+    align-self: flex-end;
+    justify-content: flex-start;
+    padding-left: 30px;
+    padding-right: 0;
+    margin-left: 50%;
+}
+
+.year {
+    position: absolute;
+    right: -65px;
+    top: 0;
+    background: #0066cc;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.timeline-item:nth-child(even) .year {
+    right: auto;
+    left: -65px;
+}
+
+/* 企业文化样式 */
+.culture-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.culture-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    justify-items: center;
+}
+
+.culture-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    justify-items: center;
+}
+
+.value-item {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.value-item:hover {
+    transform: translateY(-10px);
+}
+
+/* 研发实力样式 */
+.research-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.research-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.research-item {
+    text-align: center;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.research-icon {
+    font-size: 3rem;
+    color: #0066cc;
+    margin-bottom: 20px;
+}
+
+/* 全球布局样式 */
+.global-presence {
+    padding: 80px 0;
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#worldMap {
+    height: 500px;
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.presence-stats {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 社会责任样式 */
+.responsibility-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.responsibility-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.responsibility-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.responsibility-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.responsibility-item h3,
+.responsibility-item p {
+    padding: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .culture-content,
+    .research-grid,
+    .responsibility-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+        margin-left: 0;
+        padding-left: 50px;
+    }
+
+    .year {
+        left: -45px !important;
+        right: auto !important;
+    }
+} 
